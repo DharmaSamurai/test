@@ -51,6 +51,22 @@ echo rtrim($str)."<br/>";
 echo trim($str, '|. ')."<br/>";
 echo strtoupper($str)."<br/>";
 
+// pattern string matches
+if (preg_match('/(\d+)/', 'ras dva tree 4', $matches)) {
+	echo 'yes<br/>';
+}
 
+if (preg_match('/Ticket\s+(\d+)/i', 'Ticket 10 bla bla bla lorem ipsum', $matches2)) {
+	echo 'yes2<br/>';
+}
+
+echo count($_SERVER);
+echo "\n";
+
+echo sort($_SERVER).'<br/>';
+
+$timestamp = strtotime('2014-11-21 1:26:00');
+echo $timestamp.'<br/>';
+echo date('l d.m.Y H:i:s', $timestamp).'<br/>';
 
 ?>
