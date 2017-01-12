@@ -2,6 +2,14 @@ h2 {
   text-align: center;
   color: silver;
 }
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #4C59C3;
+}
+a:hover {
+  color: purple;
+}
 .tbl_goods {
   width: 100%;
   border-collapse: collapse;
@@ -15,4 +23,39 @@ h2 {
 .tbl_goods tr th:first-letter,
 .tbl_goods tr td:first-letter {
   text-transform: uppercase;
+}
+.red {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+}
+form {
+  width: 90%;
+  margin: 10px auto 30px;
+  position: relative;
+}
+div.anon {
+  text-align: center;
+  padding: 10px;
+}
+table.anon {
+  width: 100%;
+  border-collapse: collapse;
+}
+table.anon tr td {
+  padding: 5px;
+}
+table.anon tr td textarea,
+table.anon tr td input:not([type="checkbox"]) {
+  border: 1px solid silver;
+  border-radius: 0;
+  width: 50%;
+  margin-right: 10px;
+}
+table.anon tr td textarea {
+  resize: none;
+}
+table.anon tr td input {
+  height: 25px;
 }
