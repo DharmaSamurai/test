@@ -69,4 +69,125 @@ $timestamp = strtotime('2014-11-21 1:26:00');
 echo $timestamp.'<br/>';
 echo date('l d.m.Y H:i:s', $timestamp).'<br/>';
 
+// Exercise 4
+if ( $str == 0 ) {
+	echo 'yes';
+} elseif ( $str == 1 ) {
+	echo 'no';
+} else {
+	echo 'I do not know';
+}
+
+echo '<br/><br/>';
+
+$text = ($str == 'ku') ? 'to be' : 'not to be';
+echo $text;
+echo '<br/><br/>';
+
+$test = 'anton';
+
+function test_ok(&$parameter) {
+	$parameter.= ' 20y.o';
+}
+
+test_ok($test);
+echo $test;
+echo '<br/><br/>';
+
+function tst() {
+	print_r(func_num_args());
+	echo '<br/><br/>';
+	print_r(func_get_arg(4));
+	echo '<br/><br/>';
+	print_r(func_get_args());
+	echo '<br/><br/>';
+}
+
+$mass = array();
+tst(1, 2, 3, 4, $mass);
+
+call_user_func('tst', 'test');
+
+$a = 1;
+function test_g() {
+	global $a;
+	$a = $a*2;
+	echo 'Value $a = '.$a.'<br/>';
+}
+
+echo 'Out of function value $a = '.$a.'<br/>';
+test_g();
+echo 'After of running function value $a = '.$a.'<br/>';
+
+function test_s() {
+	static $a = 1;
+	$a = $a*4;
+	echo $a.'<br/>';
+}
+
+test_s();
+echo $a.'<br/>';
+test_s();
+
+function add_sign($string, $sign='Best regards, Olya') {
+	echo $string.' '.$sign;
+}
+
+function show_text() {
+	echo 'Send message by email<br/>';
+}
+
+$func = 'show_text';
+$func(); // show_text();
+
+$func = 'add_sign';
+$func('Hello everyone!<br/>');
+
+$first_name = 'anton';
+$anton = 'good boy';
+
+echo $$first_name; // $'anton'
+echo '<br/><br/>';
+
+// Faktorial
+// 3! = 1*2*3 = 6
+
+function fact($x) {
+	for ($result = 1; $x > 1; --$x) {
+		$result *= $x;
+	}
+	return $result;
+}
+
+echo (fact(3));
+echo '<br/><br/>';
+
+function fact2($x) {
+	if ($x === 0) {
+		return 1;
+	} else {
+		return $x * fact2($x -1);
+	}
+}
+
+echo (fact2(3));
+echo '<br/><br/>';
+
+// GET
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>

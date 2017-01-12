@@ -1,0 +1,18 @@
+h2 {
+  text-align: center;
+  color: silver;
+}
+.tbl_goods {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tbl_goods tr th,
+.tbl_goods tr td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #E5E5E5;
+}
+.tbl_goods tr th:first-letter,
+.tbl_goods tr td:first-letter {
+  text-transform: uppercase;
+}
