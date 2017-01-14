@@ -10,6 +10,9 @@ a {
 a:hover {
   color: purple;
 }
+.center {
+  text-align: center;
+}
 .tbl_goods {
   width: 100%;
   border-collapse: collapse;
